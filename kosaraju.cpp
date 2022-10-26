@@ -6,6 +6,7 @@
 #include<unordered_map>
 #include<set>
 #define NODES 875714
+#define INPUT_FILE "kosaraju_test_data.txt"
 using namespace std;
 
 class Graph {
@@ -77,7 +78,7 @@ void dfsForwardLoop(Graph &g){
 int main(){
 	int nodes = NODES;
 	Graph g(nodes);
-	ifstream edgeFile("test.txt");
+	ifstream edgeFile(INPUT_FILE);
 	if (edgeFile.is_open()){
 		string from, to;
 		while(edgeFile.good()){
