@@ -105,10 +105,5 @@ int main(){
 	for (int t : targets){
 		cout<<distances[t-1]<<",";
 	}
-
-	// for (int d : distances){
-	// 	cout<<d<<" ";
-	// }
-	// g.printAdj();
 	return 0;
 }
