@@ -191,15 +191,12 @@ int main(){
 	ifstream infile(INPUT_FILE);
 	if (infile.is_open()){
 		medianCalculator mc;
-		int sum = 0, cnt = 0;
+		int sum = 0;
 		string curr;
 		while (infile.good()){
 			infile>>curr;
 			int median = mc.insertAndGetMedian(stoi(curr));
-			sum += median;
-			sum %= N;
-			cout<<cnt<<": "<<median<<endl;
-			cnt++;
+			sum = (sum + median) % N;
 		}
 		cout<<sum;
 	}
